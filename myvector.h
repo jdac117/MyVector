@@ -11,6 +11,32 @@ class MyVector {
 	std::size_t array_size; //how mabny elements are ACTUALLY stored (size())
 	std::size_t space; // how many elements the array has room for (capacity, reserve())
 public:
+
+	bool empty() const
+	{
+		if(array_size == 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	void pop_back()
+	{
+		if (array_size > 0)
+		{
+			array_size--;
+		}
+	}
+
+	void clear()
+	{
+		array_size = 0;
+	}
+
 	MyVector() {
 		elem = nullptr;
 		array_size = 0;
